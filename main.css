@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #121212;
+}
+
+.targeta{
+    width: 300px;
+    height: 400px;
+    position: relative;
+}
+
+.targeta_body{
+    width: inherit;
+    height: inherit;
+    background-color: rgba(255,255,255,0.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+.targeta_circulo{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(#b8e633,#53ef7d);
+    border-radius: 50%;
+    animation: anim 1s linear infinite alternate;
+}
+.targeta_circulo:nth-child(1){
+    top: -55px;
+    left: -55;
+}
+.targeta_circulo:nth-child(2)
+{
+    bottom: -55px;
+    right: -55px;
+    animation-delay: -1s;
+}
+
+@keyframes anim
+{
+    100% 
+    {
+        transform: translateY(10px);
+    }
+}
